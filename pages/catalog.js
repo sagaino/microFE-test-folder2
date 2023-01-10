@@ -3,12 +3,13 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
+import CatalogComponent from '../components/Catalog'
 
 const Nav = dynamic(() => import('main/nav'), {ssr: false})
 const Footer = dynamic(() => import('main/footer'), {ssr: false})
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Catalog() {
   return (
     <>
       <Head>
@@ -19,8 +20,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Nav>Navbar in shop-app 3001</Nav>
-        Welcome to Shop App port:3001
-
+        Welcome to Catalog port:3001
+        the more change!!
+        <CatalogComponent />
         <Footer />
       </main>
     </>
